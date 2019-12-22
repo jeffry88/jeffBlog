@@ -74,11 +74,18 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.2</version>
         </dependency>
-
+        <!--引入校验工具-->
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.2.4.Final</version>
+            <version>6.1.0.Final</version>
+        </dependency>
+
+        <!--引入StringUtils工具-->
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.6</version>
         </dependency>
 
         <!-- JSON -->

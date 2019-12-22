@@ -34,27 +34,30 @@
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false"></table>
 
-        <table tableName="jeff_article" domainObjectName="Articles" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false"></table>
+<!--        <table tableName="jeff_article" domainObjectName="Articles" enableCountByExample="false"-->
+<!--               enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"></table>-->
 
-        <table tableName="jeff_category" domainObjectName="Category" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false"></table>
+<!--        <table tableName="jeff_category" domainObjectName="Category" enableCountByExample="false"-->
+<!--               enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"></table>-->
 
-        <table tableName="jeff_comment" domainObjectName="Comment" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false"></table>
+<!--        <table tableName="jeff_comment" domainObjectName="Comment" enableCountByExample="false"-->
+<!--               enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"></table>-->
 
-        <table tableName="jeff_file" domainObjectName="File" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false"></table>
+<!--        <table tableName="jeff_file" domainObjectName="File" enableCountByExample="false"-->
+<!--               enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"></table>-->
 
-        <table tableName="jeff_message" domainObjectName="Message" enableCountByExample="false"
-               enableUpdateByExample="false" enableDeleteByExample="false"
-               enableSelectByExample="false"></table>
+<!--        <table tableName="jeff_message" domainObjectName="Message" enableCountByExample="false"-->
+<!--               enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"></table>-->
 
-        <table tableName="jeff_role" domainObjectName="Role" enableCountByExample="false"
+<!--        <table tableName="jeff_role" domainObjectName="Role" enableCountByExample="false"-->
+<!--               enableUpdateByExample="false" enableDeleteByExample="false"-->
+<!--               enableSelectByExample="false"></table>-->
+        <table tableName="jeff_psw" domainObjectName="Psw" enableCountByExample="false"
                enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false"></table>
     </context>

@@ -1,11 +1,11 @@
 package com.jeffryProject.utils;
 
+import org.springframework.util.DigestUtils;
+
 import javax.servlet.http.HttpServletRequest;
 import java.security.MessageDigest;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.regex.Pattern;
 
 public class MyUtils {
@@ -28,16 +28,33 @@ public class MyUtils {
         SimpleDateFormat sdf=new SimpleDateFormat("yyyyMMddHHmmss");
         return sdf.format(new Date());
     }
+
     /**
      * 加盐加密
-     * @param params
-     * @param salt
+     * @param params //密码
+     * @param salt //密码
      * @return
      */
-    public static String md5Salt(String params, String salt){
-        String str = MD5(params);
-        String result = MD5(str+salt);
-        return result;
+    public static String pswSalt(String params, String salt){
+        String md5salt = DigestUtils.md5DigestAsHex(salt.getBytes());
+        String str = DigestUtils.md5DigestAsHex(params.getBytes());
+        String psw = DigestUtils.md5DigestAsHex((str+md5salt).getBytes());
+        return psw;
+    }
+
+    /**
+     * 盐生成方法
+     * @param mu//返回盐位数
+     * @return
+     */
+    public static String salt(Integer mu){
+        Random random = new Random();
+        String chars = "qazwsxedcrfvtgbyhnujmikolp1638074925";
+        String salt = "";
+        for(int i = 0 ; i < mu ;i ++ ){
+            salt += chars.charAt(random.nextInt(chars.length()));
+        }
+        return salt;
     }
 
     /**
