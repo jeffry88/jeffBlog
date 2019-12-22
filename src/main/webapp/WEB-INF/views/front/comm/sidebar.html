@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+<div id="sidebar_l">
+    <div th:fragment="about_me" class="about_me" id="about_me">
+        <h2>关于我</h2>
+        <ul>
+            <i><img id="user_icon" th:src="@{/img/4.jpg}"></i>
+            <p>
+                <b id="user_name"></b>，
+                <span id="user_introduction"></span>
+            </p>
+        </ul>
+    </div>
+    <div class="wdxc" th:fragment="myAlbum">
+        <h2>我的相册</h2>
+        <ul>
+            <li><a href="/"><img th:src="@{/img/7.jpg}"></a></li>
+            <li><a href="/"><img th:src="@{/img/8.jpg}"></a></li>
+            <li><a href="/"><img th:src="@{/img/9.jpg}"></a></li>
+            <li><a href="/"><img th:src="@{/img/10.jpg}"></a></li>
+            <li><a href="/"><img th:src="@{/img/11.jpg}"></a></li>
+            <li><a href="/"><img th:src="@{/img/12.jpg}"></a></li>
+        </ul>
+    </div>
+    <div class="search" th:fragment="search">
+        <form action="/e/search/index.php" method="post" name="searchform" id="searchform">
+            <input name="keyboard" id="keyboard" class="input_text" value="请输入关键字词" style="color: rgb(153, 153, 153);"
+                   onfocus="if(value=='请输入关键字词'){this.style.color='#000';value=''}"
+                   onblur="if(value==''){this.style.color='#999';value='请输入关键字词'}" type="text">
+            <input name="show" value="title" type="hidden">
+            <input name="tempid" value="1" type="hidden">
+            <input name="tbname" value="news" type="hidden">
+            <input name="Submit" class="input_submit" value="搜索" type="submit">
+        </form>
+    </div>
+    <div class="fenlei" th:fragment="category">
+        <h2>文章分类</h2>
+        <ul>
+            <li><a href="/">学无止境（33）</a></li>
+            <li><a href="/">日记（19）</a></li>
+            <li><a href="/">慢生活（520）</a></li>
+            <li><a href="/">美文欣赏（40）</a></li>
+        </ul>
+    </div>
+    <div class="tuijian" th:fragment="recommend">
+        <h2>站长推荐</h2>
+        <ul>
+            <li><a href="/">你是什么人便会遇上什么人</a></li>
+            <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
+            <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
+            <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+            <li><a href="/">你是什么人便会遇上什么人</a></li>
+            <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
+            <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
+            <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+        </ul>
+    </div>
+    <div class="links" th:fragment="links">
+        <h2>友情链接</h2>
+        <ul>
+            <a href="http://www.yangqq.com">杨青个人博客</a> <a href="http://www.yangqq.com">杨青博客</a>
+        </ul>
+    </div>
+    <div class="guanzhu" th:fragment="follow">
+        <h2>关注我 么么哒</h2>
+        <ul>
+            <img th:src="@{/img/wx.jpg}">
+        </ul>
+    </div>
+    <div class="tuijian" th:fragment="article_rank">
+        <h2>点击排行</h2>
+        <ul>
+            <li><a href="/">你是什么人便会遇上什么人</a></li>
+            <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
+            <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
+            <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+            <li><a href="/">你是什么人便会遇上什么人</a></li>
+            <li><a href="/">帝国cms 列表页调用子栏目，没有则不显示栏目名称</a></li>
+            <li><a href="/">第二届 优秀个人博客模板比赛参选活动</a></li>
+            <li><a href="/">个人博客模板《绅士》后台管理</a></li>
+        </ul>
+    </div>
+    <div class="cloud" th:fragment="article_tags">
+        <h2>标签云</h2>
+        <ul>
+            <a href="/">陌上花开</a> <a href="/">校园生活</a> <a href="/">html5</a> <a href="/">SumSung</a> <a
+                href="/">青春</a> <a href="/">温暖</a> <a href="/">阳光</a> <a href="/">三星</a><a href="/">索尼</a> <a
+                href="/">华维荣耀</a> <a href="/">三星</a> <a href="/">索尼</a>
+        </ul>
+    </div>
+</div>
+<div id="sidebar_r"></div>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="front/comm/header::header(title='留言')"></head>
+<body>
+<div th:replace="front/comm/nav::nav"></div>
+<div th:replace="front/comm/nav::mnav"></div>
+<article>
+    <div class="l_box">
+        <div th:replace="front/comm/sidebar::about_me"></div>
+        <div th:replace="front/comm/sidebar::myAlbum"></div>
+        <div th:replace="front/comm/sidebar::follow"></div>
+    </div>
+    <div class="r_box">
+        <ul class="about">
+            留言插件安装
+
+        </ul>
+    </div>
+</article>
+<footer th:replace="front/comm/footer::copyright"></footer>
+
+</body>
+</html>
