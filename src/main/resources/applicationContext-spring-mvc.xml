@@ -29,11 +29,11 @@
     <mvc:interceptors>
         <mvc:interceptor>
             <!-- /test/** 这个是拦截路径以/test开头的所有的URL-->
-            <mvc:mapping path="/admin/**"/><!--这个是拦截说有的路径-->
+            <mvc:mapping path="/admin/**"/><!--这个是拦截所有的路径-->
+            <!-- 配置不拦截器URL路径-->
+            <mvc:exclude-mapping path="/admin/adminLogin"/>
             <!-- 配置拦截器类路径-->
             <bean class="com.jeffryProject.interceptors.AdminLoginInterceptor"></bean>
-<!--            &lt;!&ndash; 配置不拦截器URL路径&ndash;&gt;-->
-<!--            <mvc:exclude-mapping path="/fore/**"/>-->
         </mvc:interceptor>
     </mvc:interceptors>
 </beans>

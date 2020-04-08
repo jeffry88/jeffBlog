@@ -200,14 +200,14 @@
 
     <!-- 根据用户名查询用户信息-->
     <select id="selectUserInfoByUsername" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select  uid, username, password, sex, introduction, create_time, user_icon, wechat, email,personal_url
+    select  uid, username, sex, introduction, create_time, user_icon, wechat, email,personal_url
     from jeff_user
     where username = #{username,jdbcType=VARCHAR}
   </select>
 
   <!-- 根据Email查询用户信息-->
     <select id="selectUserInfoByEmail" parameterType="java.lang.String" resultMap="BaseResultMap">
-    select  uid, username, password, sex, introduction, create_time, user_icon, wechat, email,personal_url
+    select  uid, username, sex, introduction, create_time, user_icon, wechat, email,personal_url
     from jeff_user
     where email = #{email,jdbcType=VARCHAR}
   </select>

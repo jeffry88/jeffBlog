@@ -14,7 +14,7 @@ public interface AdminService {
     //获取用户密码及盐值
     Psw getUserPsw(int uid) throws CommonException;
     //用户登录校验
-    User validateLogin (String email,String password) throws CommonException;
+    User validateLogin (String logName,String password) throws CommonException;
     //创建用户
     void createUser(User user) throws CommonException;
 }

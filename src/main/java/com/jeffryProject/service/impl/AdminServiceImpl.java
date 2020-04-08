@@ -19,6 +19,8 @@ import sun.rmi.runtime.Log;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 @Service
 public class AdminServiceImpl implements AdminService {
@@ -63,9 +65,19 @@ public class AdminServiceImpl implements AdminService {
     }
 
     @Override
-    public User validateLogin(String email, String password) throws CommonException {
-        //通过email获取用户uid
-        User user = userMapper.selectUserInfoByEmail(email);
+    public User validateLogin(String logName, String password) throws CommonException {
+        User user;
+        //通过正则判断登录名是用户名还是注册邮箱
+        String check = "^([a-z0-9A-Z]+[-|\\.]?)+[a-z0-9A-Z]@([a-z0-9A-Z]+(-[a-z0-9A-Z]+)?\\.)+[a-zA-Z]{2,}$";
+        Pattern regex = Pattern.compile(check);
+        Matcher matcher = regex.matcher(logName);
+        boolean isMatched = matcher.matches();
+        if(isMatched){
+            //通过email获取用户uid
+            user = userMapper.selectUserInfoByEmail(logName);
+        }else {
+            user = userMapper.selectUserInfoByUsername(logName);
+        }
         if (user == null) {
             throw new CommonException(EmCommError.USER_NOT_EXIST);
         }
